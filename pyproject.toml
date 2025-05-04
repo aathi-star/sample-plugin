@@ -1,6 +1,6 @@
 [build-system]
 requires = ["setuptools>=6.10", "wheel"]
-build.backend = "setuptools.build_meta"
+build-backend = "setuptools.build_meta"
 
 [project]
 name = "sample-plugin"
@@ -14,3 +14,4 @@ dependencies = [
 
 [project.entry-points."osdag.plugins"]
 sample_plugin = "sample_plugin.plugin:SamplePlugin"
+
