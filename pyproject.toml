@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=6.10", "wheel"]
+build.backend = "setuptools.build_meta"
+
+[project]
+name = "sample-plugin"
+version = "1.0.0"
+description = "sample plugin"
+authors = [ {name = "Aathithya Sharan"}]
+requires-python = ">=3.7"
+dependencies = [
+    "PyQt5>=5.14.2"
+]
+
+[project.entry-points."osdag.plugins"]
+sample_plugin = "sample_plugin.plugin:SamplePlugin"
