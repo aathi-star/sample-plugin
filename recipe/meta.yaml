@@ -1,13 +1,21 @@
 package:
   name: sample-plugin
-  version: 1.0.0
+  version: "0.1.0"
+
+source:
+  path: .
 
 build:
-  number: 1
+  noarch: python
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
+  host:
+    - python >=3.8
+    - pip
   run:
-    - python
-    - osdag
+    - python >=3.8
+
 about:
-  summary: sample plugin
+  summary: "Sample plugin"
+  home: "https://github.com/aathi-star/sample-plugin"
